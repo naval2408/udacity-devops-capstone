@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: capstone-green
+  labels:
+    app: capstone
+spec:
+  replicas: 2
+  selector:
+      matchLabels:
+        app: capstone
+        version: green
+  template:
+    metadata:
+      labels:
+        app: capstone
+        version: green
+    spec:
+      containers:
+        - name: capstone
+          image: docker.io/navalkishorupadhyay/devops_capstone_green
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
