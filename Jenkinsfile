@@ -1,8 +1,8 @@
 pipeline{
   agent any
   environment {
-    registryBrue = "navalkishorupadhyay/capstone_blue"
-    registryGreen = "navalkishorupadhyay/capstone_green"
+    registryBrue = "navalkishorupadhyay/devops_capstone_blue"
+    registryGreen = "navalkishorupadhyay/devops_capstone_green"
     registryCredential = 'dockerhub'
     dockertag = getDockerTag()
   }
